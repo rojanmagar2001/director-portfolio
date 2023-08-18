@@ -1,0 +1,19 @@
+.slide {
+    transition: transform .3s ease-in-out;
+}
+
+.slide-out {
+    transition: transform .3s ease-in-out;
+    transform: translateX(200%);
+}
+
+
+.slide-down {
+    transition: transform .5s ease-in-out;
+}
+
+
+.slide-up {
+    transition: transform .5s ease-in-out;
+    transform: translateY(-100%);
+}
