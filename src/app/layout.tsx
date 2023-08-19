@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
+import Footer from "@/components/Footer";
 
 const nunito = Nunito_Sans({
   weight: ["200", "300", "400", "500", "600", "700", "900"],
@@ -24,7 +25,8 @@ export default function RootLayout({
         className={`${nunito.className} overflow-x-hidden relative w-full bg-black`}
       >
         <Navbar />
-        <div className="absolute top-0 w-full z-[50]">{children}</div>
+        <div className="-mt-[84px] z-[20]">{children}</div>
+        <Footer />
       </body>
     </html>
   );

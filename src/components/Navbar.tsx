@@ -27,6 +27,14 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
+    if (navOpened) {
+      desableScroll();
+    } else {
+      enableScroll();
+    }
+  }, [navOpened]);
+
+  useEffect(() => {
     // Function to handle scroll event
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
@@ -34,7 +42,7 @@ const Navbar = () => {
       if (currentScrollPos > prevScrollPos) {
         // Scrolling downwards, show the navbar
         setNavStatus(true);
-      } else if (currentScrollPos <= 100) {
+      } else if (currentScrollPos <= 30) {
         setNavStatus(null);
       } else {
         // Scrolling upwards, hide the navbar
@@ -54,37 +62,39 @@ const Navbar = () => {
   }, [prevScrollPos]);
 
   return (
-    <nav
-      className={`sticky top-0 z-[100] ${
-        navStatus === null ? "" : navStatus ? "slide-down" : "slide-up"
-      }`}
-    >
-      <nav className={`w-full bg-transparent overflow-hidden`}>
-        <div className="w-full flex items-center justify-between px-6 py-6 sm:py-10 sm:px-8 md:px-20 top-[0]">
-          <Link
-            href={"/"}
-            className="uppercase text-2xl text-white font-bold md:text-3xl md:font-bold transition hover:opacity-80"
-          >
-            Uttar Rana
-          </Link>
-          <span
-            className="text-[28px] font-bold sm:hidden text-white"
-            onClick={() => setNavOpened(true)}
-          >
-            <HiMenuAlt2 />
-          </span>
-          <div className="hidden sm:flex gap-x-10 text-lg font-medium">
-            <Link href="/about">About</Link>
-            <Link href="/service">Services</Link>
-            <Link href="/portfolio">Portfolio</Link>
-            <Link href="/contact">Contact</Link>
+    <>
+      <nav
+        className={`sticky overflow-x-hidden top-0 z-[100] ${
+          navStatus === null ? "" : navStatus ? "slide-down" : "slide-up"
+        }`}
+      >
+        <nav className={`w-full bg-transparent overflow-hidden`}>
+          <div className="w-full flex items-center justify-between px-6 py-6 sm:px-8 md:px-20 top-[0]">
+            <Link
+              href={"/"}
+              className="uppercase text-2xl text-white font-bold md:text-3xl md:font-bold transition hover:opacity-80"
+            >
+              Uttar Rana
+            </Link>
+            <span
+              className="text-[28px] font-bold sm:hidden text-white"
+              onClick={() => setNavOpened(true)}
+            >
+              <HiMenuAlt2 />
+            </span>
+            <div className="hidden sm:flex gap-x-10 text-lg font-medium">
+              <Link href="/about">About</Link>
+              <Link href="/service">Services</Link>
+              <Link href="/portfolio">Portfolio</Link>
+              <Link href="/contact">Contact</Link>
+            </div>
           </div>
-        </div>
+        </nav>
       </nav>
       <div
         className={`${
           navOpened ? "slide" : "slide-out"
-        } absolute  inset-0 sm:hidden w-full h-screen flex z-[300]`}
+        } fixed  inset-0 sm:hidden w-full h-screen flex z-[300]`}
       >
         <div
           className={`h-full w-[20%] ${
@@ -111,7 +121,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </>
   );
 };
 
