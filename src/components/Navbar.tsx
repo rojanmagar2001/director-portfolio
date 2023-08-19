@@ -65,7 +65,11 @@ const Navbar = () => {
     <>
       <nav
         className={`sticky overflow-x-hidden top-0 z-[100] ${
-          navStatus === null ? "" : navStatus ? "slide-down" : "slide-up"
+          navStatus === null
+            ? "bg-transparent"
+            : navStatus
+            ? "slide-down bg-black"
+            : "slide-up bg-black"
         }`}
       >
         <nav className={`w-full bg-transparent overflow-hidden`}>
@@ -74,7 +78,7 @@ const Navbar = () => {
               href={"/"}
               className="uppercase text-2xl text-white font-bold md:text-3xl md:font-bold transition hover:opacity-80"
             >
-              Uttar Rana
+              Uttar Rana Magar
             </Link>
             <span
               className="text-[28px] font-bold sm:hidden text-white"

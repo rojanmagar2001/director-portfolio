@@ -1,32 +1,52 @@
 "use client";
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/variants";
 import ReactPlayer from "react-player";
 
 const HeroSection = () => {
   return (
-    <section className="w-full h-screen relative bg-black flex items-center justify-center">
+    <section className="w-full relative h-[50vh] md:h-screen overflow-hidden bg-black flex items-center justify-center">
       {/* video player todo */}
-      {/* <div>
+      <div className="absolute top-0 z-[50] object-cover">
         <ReactPlayer
-          url="https://youtube.googleapis.com/embed/?status=ok&hl=en_GB&allow_embed=0&ps=docs&partnerid=30&autoplay=0&abd=0&docid=1Us1L_Hxy8dxFn6LzQuZN-xOJSJe7ar_q&el=preview&title=nature_landscape_ocean_sea_boats_902.mp4&BASE_URL=https%3A%2F%2Fdrive.google.com%2Fu%2F0%2F&iurl=https%3A%2F%2Fdrive.google.com%2Fu%2F0%2Fvt%3Fauthuser%3D0%26id%3D1Us1L_Hxy8dxFn6LzQuZN-xOJSJe7ar_q&cc3_module=1&reportabuseurl=https%3A%2F%2Fdrive.google.com%2Fu%2F0%2Fabuse%3Fauthuser%3D0%26id%3D1Us1L_Hxy8dxFn6LzQuZN-xOJSJe7ar_q&token=1&plid=V0QXfIjdQ-LvtA&timestamp=1692378044226&length_seconds=40&BASE_YT_URL=https%3A%2F%2Fdrive.google.com%2Fu%2F0%2F&cc_load_policy=1&authuser=0&wmode=window&override_hl=1&enablecastapi=0&pipable=1&enablepostapi=1&postid=drive-viewer-video-player-object-2&origin=https%3A%2F%2Fdrive.google.com"
-          autoplay
+          url="https://res.cloudinary.com/dmm3d5bpu/video/upload/v1692442593/INTRO_VIDEO.qwe_bgz5iu.mp4"
+          autoPlay
           loop
           playing
+          muted
+          width="100vw"
+          height="100%"
+          playsinline
         />
-      </div> */}
-      <div className="w-full flex flex-col px-10 items-center gap-y-20">
-        <div className="w-full flex flex-col items-center gap-y-6">
-          <h3 className="text-2xl font-[400] text-center">
-            Filmmaker, Director & Cinematographer
-          </h3>
-          <p className="text-center">
+      </div>
+      <div className="w-full flex flex-col px-10 items-center gap-y-20 z-[200]">
+        <div className="w-full flex flex-col items-center gap-y-8">
+          <motion.div
+            variants={fadeIn("down", 0.2)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="flex flex-col items-center gap-y-2"
+          >
+            <h3 className="text-2xl font-semibold md:text-4xl tracking-[1px] text-center">
+              Filmmaker, Director & Editor
+            </h3>
+            <span className="font-thin font-mono text-[#5e5d5d] text-2xl tracking-wide">
+              Cinematography
+            </span>
+          </motion.div>
+          <motion.p
+            variants={fadeIn("up", 0.3)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="font-extralight text-center tracking-tight  md:w-[40%] opacity-70"
+          >
             &quot;For me, it&apos;s all about capturing the moment and sharing
             beautiful cinematic experiences that resonate life&quot;
-          </p>
+          </motion.p>
         </div>
-        <button className="spinner-button relative w-[150px] h-[70px] text-white text-2xl overflow-hidden">
-          {/* Projects */}
-        </button>
       </div>
     </section>
   );

@@ -33,9 +33,15 @@ export default function Home() {
         </span>
       </section>
       {/* about section */}
-      <section className="w-full bg-white flex flex-col text-[#444450] px-5 py-10 md:px-[120px] gap-y-4">
+      <section className="w-full bg-white flex flex-col text-[#444450] px-5 py-10 md:py-20 md:px-[120px] gap-y-4">
         <h2 className="text-xl md:text-2xl font-bold">Myself</h2>
-        <div className="flex flex-col tracking-[-2%] text-sm sm:text-lg font-light gap-y-3">
+        <motion.div
+          variants={fadeIn("up", 0)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="flex flex-col tracking-[-2%] text-sm sm:text-lg font-light gap-y-3"
+        >
           <p>
             I work as a multi-award winning freelance filmmaker, director,
             editor and cinematographer based in the South West of UK. I&apos;m
@@ -55,7 +61,16 @@ export default function Home() {
             <span className="text-black font-bold">contact me</span> to discuss
             any commissions or collaboration enquiries you may have.
           </p>
-        </div>
+        </motion.div>
+        <motion.button
+          variants={fadeIn("right", 0.1)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="w-[150px] h-[50px] border-[1px] tranisiton-all hover:bg-black hover:text-white"
+        >
+          Download Cv
+        </motion.button>
       </section>
     </main>
   );
