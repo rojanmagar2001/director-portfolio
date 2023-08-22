@@ -88,7 +88,7 @@ const Navbar = () => {
             </span>
             <div className="hidden sm:flex gap-x-10 text-lg font-medium">
               <Link href="/about">About</Link>
-              <Link href="/service">Services</Link>
+              <Link href="/services">Services</Link>
               <Link href="/portfolio">Portfolio</Link>
               <Link href="/contact">Contact</Link>
             </div>
@@ -115,7 +115,7 @@ const Navbar = () => {
             <Link href="/about">About</Link>
           </div>
           <div className="p-2 border-b-gray-500 border-b-[1px] w-full">
-            <Link href="/service">Services</Link>
+            <Link href="/services">Services</Link>
           </div>
           <div className="p-2 border-b-gray-500 border-b-[1px] w-full">
             <Link href="/portfolio">Portfolio</Link>

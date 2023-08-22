@@ -54,15 +54,15 @@ export default function Home() {
         <div className="flex flex-col items-center gap-y-10">
           <div className="flex flex-col items-center gap-y-4">
             <h1 className="text-4xl opacity-90 uppercase">Our Services</h1>
-            <p className="text-sm opacity-60">
+            {/* <p className="text-base opacity-60">
               We provide variety of different services including camera, film
               direction, editing, music video and cinematic shoots.
-            </p>
+            </p> */}
           </div>
-          <div className="w-full h-full flex flex-col gap-y-16 p-10 px-20">
+          <div className="w-full h-full flex flex-col gap-y-16 p-10 px-5 md:px-50">
             {serviceData.map((service, i) => (
               <div
-                className="w-full flex flex-col md:flex-row md:justify-between even:flex-row-reverse even:text-end"
+                className="w-full flex flex-col md:flex-row md:justify-evenly even:flex-row-reverse even:text-end"
                 key={i}
               >
                 <motion.div
@@ -74,14 +74,19 @@ export default function Home() {
                   initial="hidden"
                   whileInView="show"
                   exit="hidden"
-                  className="w-[50%] flex flex-col justify-start gap-y-10"
+                  className="w-[40%] flex flex-col justify-start gap-y-5"
                 >
                   <span className="font-serif text-8xl">0{service.id}</span>
-                  <div>
-                    <h3 className="text-2xl leading-5 font-medium">
-                      {service.name}
-                    </h3>
-                    <p className="text-base font-light tracking-[2px]">
+                  <div className="flex flex-col gap-y-10">
+                    <div className="flex flex-col">
+                      <h3 className="text-2xl leading-5 font-medium uppercase">
+                        {service.name}
+                      </h3>
+                      <p className="text-base font-light tracking-[2px] uppercase">
+                        {service.subtitle}
+                      </p>
+                    </div>
+                    <p className="text-lg tracking-[-2%]">
                       {service.description}
                     </p>
                   </div>
@@ -95,7 +100,7 @@ export default function Home() {
                   initial="hidden"
                   whileInView="show"
                   exit="hidden"
-                  className="w-[50%]"
+                  className="w-[40%]"
                 >
                   <Image
                     src={service.image}
