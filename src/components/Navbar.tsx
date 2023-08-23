@@ -42,7 +42,7 @@ const Navbar = () => {
       if (currentScrollPos > prevScrollPos) {
         // Scrolling downwards, show the navbar
         setNavStatus(true);
-      } else if (currentScrollPos <= 30) {
+      } else if (currentScrollPos <= 50) {
         setNavStatus(null);
       } else {
         // Scrolling upwards, hide the navbar
@@ -68,12 +68,12 @@ const Navbar = () => {
           navStatus === null
             ? "bg-transparent"
             : navStatus
-            ? "slide-down bg-black"
-            : "slide-up bg-black"
+            ? "slide-down bg-black/40"
+            : "slide-up bg-black/40"
         }`}
       >
         <nav className={`w-full bg-transparent overflow-hidden`}>
-          <div className="w-full flex items-center justify-between px-6 py-6 sm:px-8 md:px-20 top-[0]">
+          <div className="w-full flex items-center justify-between md:justify-around px-6 py-4 sm:px-8  top-[0]">
             <Link
               href={"/"}
               className="uppercase text-2xl text-white font-bold md:text-3xl md:font-bold transition hover:opacity-80"
@@ -81,12 +81,12 @@ const Navbar = () => {
               Uttar Rana Magar
             </Link>
             <span
-              className="text-[28px] font-bold sm:hidden text-white"
+              className="text-[28px] font-bold md:hidden text-white"
               onClick={() => setNavOpened(true)}
             >
               <HiMenuAlt2 />
             </span>
-            <div className="hidden sm:flex gap-x-10 text-lg font-medium">
+            <div className="hidden md:flex gap-x-10 text-lg font-medium">
               <Link href="/about">About</Link>
               <Link href="/services">Services</Link>
               <Link href="/portfolio">Portfolio</Link>
@@ -98,14 +98,14 @@ const Navbar = () => {
       <div
         className={`${
           navOpened ? "slide" : "slide-out"
-        } fixed  inset-0 sm:hidden w-full h-screen flex z-[300]`}
+        } fixed  inset-0 md:hidden w-full h-screen flex z-[300]`}
       >
         <div
           className={`h-full w-[20%] ${
-            navOpened ? "bg-black opacity-50" : "bg-transparent"
+            navOpened ? "bg-black " : "bg-transparent"
           }`}
         ></div>
-        <div className="h-full flex flex-col gap-y-2 w-full text-white bg-[#101010] py-12 px-6 text-lg">
+        <div className="h-full flex flex-col gap-y-2 w-full text-white bg-[#101010] py-6 px-6 text-lg">
           <div className="w-full flex justify-end text-white text-3xl">
             <span onClick={() => setNavOpened(false)}>
               <AiOutlineClose />

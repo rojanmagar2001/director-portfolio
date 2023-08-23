@@ -23,7 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${nunito.className} w-full bg-black`}>
         <Navbar />
-        <main className="-mt-[84px] z-[20] h-full">{children}</main>
+        <main className="-mt-[64px] md:-mt-[68px] z-[20] h-full">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
