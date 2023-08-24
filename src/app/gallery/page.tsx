@@ -34,7 +34,7 @@ export default function Page() {
       {showVideo && <Modal setShowVideo={setShowVideo} link={link} />}
       <section
         id="gallery"
-        className="flex flex-col items-center justify-center gap-y-20"
+        className="flex flex-col items-center justify-center gap-y-20 w-[100vw]"
       >
         <div className="flex flex-col mt-28 items-center justify-center gap-y-5 w-[60%] text-center">
           <motion.h1
@@ -60,7 +60,7 @@ export default function Page() {
             collaborations. Your inquiries are most welcome.
           </motion.p>
         </div>
-        <div className="flex flex-col items-center bg-[#101010] min-h-[700px]">
+        <div className="w-full flex flex-col items-center bg-[#101010] min-h-[700px]">
           <div className="flex flex-wrap px-16 py-10 gap-x-5 gap-y-4">
             {galleryVideoType.map((video, index) => (
               <motion.button
@@ -78,7 +78,7 @@ export default function Page() {
               </motion.button>
             ))}
           </div>
-          <div className="w-[100vw] flex flex-wrap">
+          <div className="flex flex-wrap">
             {gallery.map((video, index) => (
               <motion.div
                 variants={fadeIn("up", parseFloat(`0.${index % 3}`))}
