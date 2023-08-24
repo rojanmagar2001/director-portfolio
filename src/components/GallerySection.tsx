@@ -10,7 +10,7 @@ import { fadeIn } from "@/variants";
 const GallerySection = () => {
   const [showVideo, setShowVideo] = useState<boolean>(false);
   const [link, setLink] = useState<string>("");
-
+  const data = galleryData.slice(0, 9);
   const handleOpenVideo = (link: string) => {
     setLink(link);
     setShowVideo(true);
@@ -18,8 +18,8 @@ const GallerySection = () => {
   return (
     <>
       {showVideo && <Modal setShowVideo={setShowVideo} link={link} />}
-      <section className="w-full flex flex-wrap">
-        {galleryData.map((video, index) => (
+      <section id="gallery" className="w-full flex flex-wrap">
+        {data.map((video, index) => (
           <motion.div
             variants={fadeIn("up", parseFloat(`0.${index % 3}`))}
             initial="hidden"
@@ -45,7 +45,7 @@ const GallerySection = () => {
               >
                 <IoPlayOutline />
               </button>
-              <div className="bg-black/40 cursor-pointer absolute w-full h-full flex flex-col items-center gap-y-2 justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+              <div className="bg-black/70 cursor-pointer absolute w-full h-full flex flex-col items-center gap-y-2 justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                 <div className="w-full h-full flex items-center justify-center relative">
                   <p className="text-white text-center text-base italic absolute bottom-[32%]">
                     {video.title}

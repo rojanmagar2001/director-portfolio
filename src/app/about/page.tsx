@@ -10,11 +10,11 @@ export default function Home() {
       {/* Cover Image */}
       <section className="w-full relative">
         <Image
-          src="/about.jpg"
+          src="/me.jpg"
           width={5998}
           height={3687}
           alt=""
-          className="object-cover w-full h-[400px] md:h-[500px]"
+          className="object-cover object-center w-full h-[400px] md:h-[600px]"
         />
         <motion.div
           variants={fadeIn("up", 0)}
@@ -33,7 +33,7 @@ export default function Home() {
         </span>
       </section>
       {/* about section */}
-      <section className="w-full bg-white flex flex-col text-[#444450] px-5 py-10 md:py-20 md:px-[120px] gap-y-4">
+      <section className="w-full bg-white flex flex-col text-[#444450] px-5 py-10 md:py-20 md:px-[120px] xl:px-60 gap-y-4">
         <h2 className="text-xl md:text-2xl font-bold">Myself</h2>
         <motion.div
           variants={fadeIn("up", 0)}

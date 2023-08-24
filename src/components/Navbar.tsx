@@ -61,6 +61,10 @@ const Navbar = () => {
     };
   }, [prevScrollPos]);
 
+  const handleCloseNav = () => {
+    setNavOpened(false);
+  };
+
   return (
     <>
       <nav
@@ -73,7 +77,7 @@ const Navbar = () => {
         }`}
       >
         <nav className={`w-full bg-transparent overflow-hidden`}>
-          <div className="w-full flex items-center justify-between md:justify-around px-6 py-4 sm:px-8  top-[0]">
+          <div className="w-full flex items-center justify-between md:justify-around px-6 py-4 sm:px-8 top-[0]">
             <Link
               href={"/"}
               className="uppercase text-2xl text-white font-bold md:text-3xl md:font-bold transition hover:opacity-80"
@@ -86,10 +90,10 @@ const Navbar = () => {
             >
               <HiMenuAlt2 />
             </span>
-            <div className="hidden md:flex gap-x-10 text-lg font-medium">
+            <div className="hidden md:flex gap-x-10 xl:gap-x-16 text-lg font-medium">
               <Link href="/about">About</Link>
               <Link href="/services">Services</Link>
-              <Link href="/portfolio">Portfolio</Link>
+              <Link href="/gallery">Gallery</Link>
               <Link href="/contact">Contact</Link>
             </div>
           </div>
@@ -112,16 +116,24 @@ const Navbar = () => {
             </span>
           </div>
           <div className="p-2 border-b-gray-500 border-b-[1px] w-full ">
-            <Link href="/about">About</Link>
+            <Link href="/about" onClick={() => handleCloseNav()}>
+              About
+            </Link>
           </div>
           <div className="p-2 border-b-gray-500 border-b-[1px] w-full">
-            <Link href="/services">Services</Link>
+            <Link href="/services" onClick={() => handleCloseNav()}>
+              Services
+            </Link>
           </div>
           <div className="p-2 border-b-gray-500 border-b-[1px] w-full">
-            <Link href="/portfolio">Portfolio</Link>
+            <Link href="/gallery" onClick={() => handleCloseNav()}>
+              Gallery
+            </Link>
           </div>
           <div className="p-2 border-b-gray-500 border-b-[1px] w-full">
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact" onClick={() => handleCloseNav()}>
+              Contact
+            </Link>
           </div>
         </div>
       </div>

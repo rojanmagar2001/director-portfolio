@@ -41,12 +41,14 @@ export default function Home() {
               variants={fadeIn("up", 0.2)}
               className="w-full flex"
             >
-              <Image
-                src="/service.jpg"
-                width={1024}
-                height={576}
-                alt="service"
-                className="object-cover"
+              <video
+                src="https://res.cloudinary.com/dmm3d5bpu/video/upload/v1692442593/INTRO_VIDEO.qwe_bgz5iu.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                // controls
+                className="w-full xl:h-[700px] object-cover object-center"
               />
             </motion.div>
           </div>
@@ -59,7 +61,7 @@ export default function Home() {
               direction, editing, music video and cinematic shoots.
             </p> */}
           </div>
-          <div className="w-full h-full flex flex-col gap-y-16 p-10 px-5 xl:px-50">
+          <div className="w-full h-full flex flex-col gap-y-16 p-10 px-5 xl:px-52">
             {serviceData.map((service, i) => (
               <div
                 className="w-full flex flex-col md:flex-row justify-between xl:justify-evenly even:flex-row-reverse even:text-end gap-x-4"
@@ -107,7 +109,7 @@ export default function Home() {
                     width={408}
                     height={612}
                     alt="service"
-                    className="object-cover w-full xl:h-[700px]"
+                    className="object-cover w-full xl:h-[800px]"
                   />
                 </motion.div>
               </div>
@@ -119,7 +121,8 @@ export default function Home() {
         <motion.div
           variants={fadeIn("up", 0.2)}
           initial="hidden"
-          animate="show"
+          whileInView="show"
+          viewport={{ once: true }}
           exit="hidden"
           className=" flex flex-col items-center justify-center text-black gap-y-4"
         >

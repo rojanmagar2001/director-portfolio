@@ -60,7 +60,12 @@ const HeroSection = () => {
                 sharing beautiful cinematic experiences that resonate life&quot;
               </motion.p>
             </div>
-            <span className="text-5xl md:text-6xl animate-pulse transition-all hover:animate-none hover:scale-[1.5] cursor-pointer">
+            <span
+              className="text-5xl md:text-6xl animate-pulse transition-all hover:animate-none hover:scale-[1.5] cursor-pointer"
+              onClick={() =>
+                handleOpenVideo("https://www.youtube.com/embed/jCqtGQTaISM")
+              }
+            >
               <IoPlayOutline />
             </span>
           </div>

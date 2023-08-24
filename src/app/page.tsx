@@ -16,7 +16,7 @@ export default function Home() {
               {/* <CountUp start={0} end={2} duration={5} /> + */}
               <Counter start={0} end={16} />
             </div>
-            <div className="text-base uppercase tracking-[1px] leading-[1.4] max-w-[100]">
+            <div className="text-lg uppercase tracking-[2px] leading-[1.4] max-w-[100] font-thin">
               Years of experience
             </div>
           </div>
@@ -25,7 +25,7 @@ export default function Home() {
             <div className="text-4xl xl:text-6xl font-extrabold text-accent mb-2">
               <Counter start={0} end={50} />
             </div>
-            <div className="text-base uppercase tracking-[1px] leading-[1.4] max-w-[100]">
+            <div className="text-lg uppercase tracking-[2px] leading-[1.4] max-w-[100] font-thin">
               Satisfied clients
             </div>
           </div>
@@ -34,7 +34,7 @@ export default function Home() {
             <div className="text-4xl xl:text-6xl font-extrabold text-accent mb-2">
               <Counter start={0} end={70} />
             </div>
-            <div className="text-base uppercase tracking-[1px] leading-[1.4] max-w-[100]">
+            <div className="text-lg uppercase tracking-[2px] leading-[1.4] max-w-[100] font-thin">
               Finished Projects
             </div>
           </div>
