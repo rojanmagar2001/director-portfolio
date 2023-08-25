@@ -14,7 +14,7 @@ export default function Home() {
           width={5998}
           height={3687}
           alt=""
-          className="object-cover object-center w-full h-[400px] md:h-[600px]"
+          className="object-cover object-top w-full h-[400px] md:h-[600px]"
         />
         <motion.div
           variants={fadeIn("up", 0)}
