@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"; 
 import { HiMenuAlt2 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import "@/styles/animate.css";
@@ -91,10 +91,20 @@ const Navbar = () => {
               <HiMenuAlt2 />
             </span>
             <div className="hidden md:flex gap-x-10 xl:gap-x-16 text-lg font-medium">
-              <Link href="/about">About</Link>
-              <Link href="/services">Services</Link>
-              <Link href="/gallery">Gallery</Link>
-              <Link href="/contact">Contact</Link>
+              <div className="relative group flex items-center justify-center">
+               <Link href="/about">About</Link>
+               <span className="absolute left-0 -bottom-1 w-[0%] h-[1px] bg-white group-hover:w-full group-hover:transition-all"></span>
+              </div>
+              <div className="relative group">
+               <Link href="/services">Services</Link>
+               <span className="absolute left-0 -bottom-1 w-[0%] h-[1px] bg-white group-hover:w-full group-hover:transition-all"></span>
+              </div><div className="relative group">
+               <Link href="/gallery">Gallery</Link>
+               <span className="absolute left-0 -bottom-1 w-[0%] h-[1px] bg-white group-hover:w-full group-hover:transition-all"></span>
+              </div><div className="relative group">
+               <Link href="/contact">Contact</Link>
+               <span className="absolute left-0 -bottom-1 w-[0%] h-[1px] bg-white group-hover:w-full group-hover:transition-all"></span>
+              </div>
             </div>
           </div>
         </nav>

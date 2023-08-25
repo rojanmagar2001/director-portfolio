@@ -43,10 +43,7 @@ export default function Home() {
           className="flex flex-col tracking-[-2%] text-sm sm:text-lg font-light gap-y-3"
         >
           <p>
-            I work as a multi-award winning freelance filmmaker, director,
-            editor and cinematographer based in the South West of UK. I&apos;m
-            available to work from Bristol, London or Worldwide on Commercial,
-            Corporate or TV video projects.
+          Welcome to my portfolio, a visual journey through my passion for filmmaking and storytelling. Hailing from the captivating landscapes of Nepal, I have spent over 13 years honing my craft as a multi-award winning freelance filmmaker, director, editor, and cinematographer.
           </p>
           <p>
             Often I see images and have ideas that I would like to share with
@@ -56,10 +53,10 @@ export default function Home() {
             more!
           </p>
           <p>
-            This website features a portfolio of some of my recent commercial
-            and personal projects. Please feel free to{" "}
-            <span className="text-black font-bold">contact me</span> to discuss
-            any commissions or collaboration enquiries you may have.
+          My creative journey is a fusion of experiences from both Nepal and beyond. From the vibrant energy of bustling streets to the serenity of natural vistas, these diverse influences have shaped my unique approach to filmmaking. Each project I undertake is a chance to weave captivating narratives that resonate with audiences across cultures.
+          </p>
+          <p>
+          Every frame I capture, every edit I meticulously sculpt, is a testament to my unwavering commitment to the art of storytelling. I believe that every visual has a tale to tell, every scene a story waiting to be unveiled.
           </p>
         </motion.div>
         <motion.button
@@ -69,7 +66,7 @@ export default function Home() {
           exit="hidden"
           className="w-[150px] h-[50px] border-[1px] tranisiton-all hover:bg-black hover:text-white"
         >
-          Download Cv
+          Download CV
         </motion.button>
       </section>
     </main>

@@ -61,7 +61,7 @@ export default function Page() {
           </motion.p>
         </div>
         <div className="w-full flex flex-col items-center bg-[#101010] min-h-[700px]">
-          <div className="flex flex-wrap px-16 py-10 gap-x-5 gap-y-4">
+          <div className="w-full flex flex-wrap px-16 py-10 gap-x-5 gap-y-4">
             {galleryVideoType.map((video, index) => (
               <motion.button
                 variants={fadeIn("left", 0.4 + parseFloat(`0.${index}`))}
@@ -78,7 +78,7 @@ export default function Page() {
               </motion.button>
             ))}
           </div>
-          <div className="flex flex-wrap">
+          <div className="w-full flex flex-wrap">
             {gallery.map((video, index) => (
               <motion.div
                 variants={fadeIn("up", parseFloat(`0.${index % 3}`))}
@@ -91,13 +91,13 @@ export default function Page() {
                 className="w-[100%] md:w-1/3 justify-center"
                 key={video.id}
               >
-                <div className="w-full relative flex justify-center items-center group">
+                <div className="w-full h-full relative flex justify-center items-center group">
                   <Image
                     src={video.image}
                     width={860}
                     height={574}
                     alt={video.title}
-                    className="object-cover object-center"
+                    className="h-full aspect-auto object-cover object-center"
                   />
                   <button
                     className="text-6xl absolute z-20"

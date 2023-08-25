@@ -22,16 +22,11 @@ export default function Home() {
             exit="hidden"
             className="w-[70%] xl:w-[80%] text-center text-lg xl:text-xl font-thin tracking-[1motion.x]"
           >
-            We design flower arrangements and displays for various occasions,
-            spaces, and themes, including; commercials, advertisements,
-            packaging, retail stores, complexes, exhibition halls, international
-            expositions, etc. We will propose a flower arrangement styling plan
-            that matches the client&apos;s concept and ideas. We also offer
-            licenses for our floral patterns. Please feel free to contact us.
+           Let's bring your vision to life! Whether it's directing, editing, or filmmaking, I'm here to create captivating stories. Reach out and let's make magic happen.
           </motion.p>
         </div>
       </div>
-      <div className="w-full flex flex-col py-8 md:py-20 px-16 xl:py-0 gap-y-16 md:gap-y-20">
+      <div className="w-full flex flex-col px-4 py-12 md:py-24 md:px-16 xl:py-20 gap-y-16 md:gap-y-20">
         <motion.div
           variants={fadeIn("left", 0.4)}
           initial="hidden"
@@ -39,11 +34,11 @@ export default function Home() {
           exit="hidden"
           className="w-full flex border-b-[1px] pb-2 md:pb-4 xl:pb-8 gap-x-10 xl:gap-x-20 items-baseline group"
         >
-          <span className="text-lg md:text-xl xl:text-2xl font-thin">
+          <span className="text-base md:text-xl xl:text-2xl font-thin">
             (mail)
           </span>
           <a
-            className="text-2xl md:text-4xl xl:text-4xl group-hover:animate-bounce"
+            className="text-lg md:text-4xl xl:text-4xl group-hover:animate-bounce"
             href="mailto:uttarmagar2023@gmail.com"
           >
             uttarmagar2023@gmail.com
@@ -56,14 +51,14 @@ export default function Home() {
           exit="hidden"
           className="w-full flex border-b-[1px] pb-2 md:pb-4 xl:pb-8 gap-x-10 xl:gap-x-20 items-baseline group"
         >
-          <span className="text-lg md:text-xl xl:text-2xl font-thin">
+          <span className="text-base md:text-xl xl:text-2xl font-thin">
             (phone)
           </span>
           <a
-            className="text-2xl md:text-4xl xl:text-4xl group-hover:animate-bounce"
+            className="text-lg md:text-4xl xl:text-4xl group-hover:animate-bounce"
             href="tel:+9779823000101"
           >
-            +977 9823000101
+            +977 9843242948
           </a>
         </motion.div>
       </div>

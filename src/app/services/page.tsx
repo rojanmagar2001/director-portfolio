@@ -64,7 +64,7 @@ export default function Home() {
           <div className="w-full h-full flex flex-col gap-y-16 p-10 px-5 xl:px-52">
             {serviceData.map((service, i) => (
               <div
-                className="w-full flex flex-col md:flex-row justify-between xl:justify-evenly even:flex-row-reverse even:text-end gap-x-4"
+                className={`w-full flex flex-col md:flex-row ${i !== 2 ? "justify-between xl:justify-evenly" : "justify-center items-center mt-5 md:ml-10"} even:flex-row-reverse even:text-end gap-x-4`}
                 key={i}
               >
                 <motion.div
@@ -78,7 +78,7 @@ export default function Home() {
                   exit="hidden"
                   className="w-[50%] flex flex-col justify-start gap-y-5"
                 >
-                  <span className="font-serif text-8xl">0{service.id}</span>
+                  {/* <span className="font-serif text-8xl">0{service.id}</span> */}
                   <div className="flex flex-col gap-y-10">
                     <div className="flex flex-col">
                       <h3 className="text-2xl leading-5 font-medium uppercase">
@@ -93,7 +93,9 @@ export default function Home() {
                     </p>
                   </div>
                 </motion.div>
-                <motion.div
+                {
+                  i !== 2 && (
+                    <motion.div
                   variants={
                     service.id % 2 !== 1
                       ? fadeIn("right", 0)
@@ -112,6 +114,8 @@ export default function Home() {
                     className="object-cover w-full xl:h-[800px]"
                   />
                 </motion.div>
+                  )
+                }
               </div>
             ))}
           </div>
