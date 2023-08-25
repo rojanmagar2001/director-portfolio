@@ -22,7 +22,7 @@ export default function Home() {
             exit="hidden"
             className="w-[70%] xl:w-[80%] text-center text-lg xl:text-xl font-thin tracking-[1motion.x]"
           >
-           Let's bring your vision to life! Whether it's directing, editing, or filmmaking, I'm here to create captivating stories. Reach out and let's make magic happen.
+           Let&apos;s bring your vision to life! Whether it&apos;s directing, editing, or filmmaking, I&apos;m here to create captivating stories. Reach out and let&apos;s make magic happen.
           </motion.p>
         </div>
       </div>

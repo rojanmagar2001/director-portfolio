@@ -66,8 +66,8 @@ export default function Home() {
           exit="hidden"
           className="w-[150px] h-[50px] border-[1px] tranisiton-all hover:bg-black hover:text-white"
         >
-          Download CV
-        </motion.button>
+          <a href="https://drive.google.com/file/d/1zuGaP2Vx3R38_aejmOwKrdD47q1wexkK/view?usp=sharing" target="_blank">Download CV</a>
+                  </motion.button>
       </section>
     </main>
   );

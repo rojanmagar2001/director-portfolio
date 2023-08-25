@@ -57,14 +57,14 @@ export const galleryData = [
   {
     id: 5,
     title: "The Hidden Gems of Dhankuta",
-    image: "/gallery/dhankuta.jpg",
+    image: "/gallery/dhankuta.JPG",
     link: "https://www.youtube.com/embed/mDJAeVw8TPI",
     type: ["documentry", "editor"],
   },
   {
     id: 6,
     title: "Tribeni of Betrawati Uttargaya",
-    image: "/gallery/betrawati.jpg",
+    image: "/gallery/betrawati.JPG",
     link: "https://www.youtube.com/embed/U79d_YdfW6o",
     type: ["documentry", "editor"],
   },

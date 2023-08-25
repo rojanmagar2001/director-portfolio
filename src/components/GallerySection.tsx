@@ -31,13 +31,13 @@ const GallerySection = () => {
             className="w-[100%] md:w-1/3 justify-center"
             key={video.id}
           >
-            <div className="w-full relative flex justify-center items-center group">
+            <div className="w-full h-full relative flex justify-center items-center group">
               <Image
                 src={video.image}
                 width={860}
                 height={574}
                 alt={video.title}
-                className="object-cover object-center"
+                className="h-full aspect-auto object-cover object-center"
               />
               <button
                 className="text-6xl absolute z-20"
