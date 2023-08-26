@@ -7,7 +7,7 @@ import { fadeIn } from "@/variants";
 import Link from "next/link";
 export default function Home() {
   return (
-    <section className="h-full flex flex-col mt-[84px]">
+    <section className="h-full flex flex-col mt-[84px] overflow-x-hidden">
       <div className="flex flex-col px-4 md:px-10 xl:px-20 py-20 gap-y-[130px]">
         <div className="flex flex-col gap-y-10">
           <motion.div
