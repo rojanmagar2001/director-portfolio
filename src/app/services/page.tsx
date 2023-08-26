@@ -30,7 +30,7 @@ export default function Home() {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="text-6xl font-mono opacity-60"
+              className="text-4xl md:text-6xl font-mono opacity-60"
             >
               Capture the present.
             </motion.h1>
