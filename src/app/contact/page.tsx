@@ -26,7 +26,7 @@ export default function Home() {
           </motion.p>
         </div>
       </div>
-      <div className="w-full flex flex-col px-4 py-12 md:py-24 md:px-16 xl:py-20 gap-y-16 md:gap-y-20">
+      <div className="w-full flex flex-col px-4 py-12 md:py-24 md:px-16 xl:py-20 gap-y-8 md:gap-y-16 md:gap-y-20">
         <motion.div
           variants={fadeIn("left", 0.4)}
           initial="hidden"
@@ -42,6 +42,22 @@ export default function Home() {
             href="mailto:uttarmagar2023@gmail.com"
           >
             uttarmagar2023@gmail.com
+          </a>
+        </motion.div>
+<motion.div
+          variants={fadeIn("left", 0.6)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="w-full flex border-b-[1px] pb-2 md:pb-4 xl:pb-8 gap-x-10 xl:gap-x-20 items-baseline group"
+        >
+          <span className="text-base md:text-xl xl:text-2xl font-thin">
+            (address)
+          </span>
+          <a
+            className="text-lg md:text-4xl xl:text-4xl group-hover:animate-bounce"
+          >
+            Kathmandu, Nepal
           </a>
         </motion.div>
         <motion.div
