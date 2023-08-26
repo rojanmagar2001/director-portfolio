@@ -130,7 +130,7 @@ export default function Home() {
           exit="hidden"
           className=" flex flex-col items-center justify-center text-black gap-y-4"
         >
-          <p className="text-lg opacity-80">Feel free to connect with me</p>
+          <p className="text-sm md:text-lg opacity-80">Feel free to connect with me</p>
           <Link
             href="/contact"
             className="w-[150px] h-[50px] border-[1px] flex items-center justify-center border-black font-light transition-all hover:text-white hover:bg-black"
