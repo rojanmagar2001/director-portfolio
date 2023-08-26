@@ -64,7 +64,7 @@ export default function Home() {
           <div className="w-full h-full flex flex-col gap-y-16 px-2 md:p-10 md:px-5 xl:px-52">
             {serviceData.map((service, i) => (
               <div
-                className={`w-full flex flex-col md:flex-row ${i !== 2 ? "justify-between xl:justify-evenly" : "justify-center items-center mt-5 md:ml-10"} even:flex-row-reverse even:text-end gap-x-4`}
+                className={`w-full flex flex-col md:flex-row ${i !== 2 ? "justify-between xl:justify-evenly" : "justify-center items-center mt-5 md:ml-10"} md:even:flex-row-reverse md:even:text-end gap-x-4`}
                 key={i}
               >
                 <motion.div
