@@ -36,7 +36,7 @@ export default function Page() {
         id="gallery"
         className="flex flex-col items-center justify-center gap-y-20 w-[100vw]"
       >
-        <div className="flex flex-col mt-28 items-center justify-center gap-y-5 w-[60%] text-center">
+        <div className="flex flex-col mt-28 items-center justify-center gap-y-5 w-[90%] md:w-[60%] text-center">
           <motion.h1
             variants={fadeIn("up", 0.1)}
             initial="hidden"
@@ -51,7 +51,7 @@ export default function Page() {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-lg font-thin tracking-[2px]"
+            className="text-sm md:text-lg font-thin tracking-[2px]"
           >
             Explore my portfolio showcasing directorial and cinematography
             endeavors across diverse domains including commercials, corporate
@@ -61,7 +61,7 @@ export default function Page() {
           </motion.p>
         </div>
         <div className="w-full flex flex-col items-center bg-[#101010] min-h-[700px]">
-          <div className="w-full flex flex-wrap px-16 py-10 gap-x-5 gap-y-4">
+          <div className="w-full flex flex-wrap px-2 md:px-16 py-10 gap-x-5 gap-y-4">
             {galleryVideoType.map((video, index) => (
               <motion.button
                 variants={fadeIn("left", 0.4 + parseFloat(`0.${index}`))}
@@ -69,7 +69,7 @@ export default function Page() {
                 animate="show"
                 exit="hidden"
                 key={index}
-                className={`capitalize text-lg tracking-[1px] px-6 py-3 border-[1px] hover:border-white ${
+                className={`capitalize text-base md:text-lg tracking-[1px] px-4 md:px-6 py-3 border-[1px] hover:border-white ${
                   video.name === videoType ? "border-white" : "border-[#333]"
                 }`}
                 onClick={() => setVideoType(video.name)}
