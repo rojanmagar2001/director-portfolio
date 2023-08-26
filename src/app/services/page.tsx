@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <section className="h-full flex flex-col mt-[84px]">
-      <div className="flex flex-col px-10 xl:px-20 py-20 gap-y-[130px]">
+      <div className="flex flex-col px-4 md:px-10 xl:px-20 py-20 gap-y-[130px]">
         <div className="flex flex-col gap-y-10">
           <motion.div
             variants={fadeIn("right", 0.8)}
@@ -61,7 +61,7 @@ export default function Home() {
               direction, editing, music video and cinematic shoots.
             </p> */}
           </div>
-          <div className="w-full h-full flex flex-col gap-y-16 p-10 px-5 xl:px-52">
+          <div className="w-full h-full flex flex-col gap-y-16 px-2 md:p-10 md:px-5 xl:px-52">
             {serviceData.map((service, i) => (
               <div
                 className={`w-full flex flex-col md:flex-row ${i !== 2 ? "justify-between xl:justify-evenly" : "justify-center items-center mt-5 md:ml-10"} even:flex-row-reverse even:text-end gap-x-4`}
@@ -76,7 +76,7 @@ export default function Home() {
                   initial="hidden"
                   whileInView="show"
                   exit="hidden"
-                  className="w-[50%] flex flex-col justify-start gap-y-5"
+                  className="w-full md:w-[50%] flex flex-col justify-start gap-y-5"
                 >
                   {/* <span className="font-serif text-8xl">0{service.id}</span> */}
                   <div className="flex flex-col gap-y-10">
@@ -104,7 +104,7 @@ export default function Home() {
                   initial="hidden"
                   whileInView="show"
                   exit="hidden"
-                  className="w-[50%]"
+                  className="w-full md:w-[50%]"
                 >
                   <Image
                     src={service.image}
