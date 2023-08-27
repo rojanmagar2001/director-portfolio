@@ -43,7 +43,7 @@ const HeroSection = () => {
               >
                 {/* <h2 className="text-2xl font-bold md:text-5xl">Hi, I&apos;m a</h2> */}
                 <h3 className="text-3xl md:text-4xl font-bold uppercase xl:text-6xl tracking-[2px] text-center">
-                  Editor, Director & Filmmaker
+                  Editor, Director & Film Maker
                 </h3>
                 {/* <span className="font-thin font-mono text-[#5e5d5d] text-2xl tracking-wide">
               Cinematography
