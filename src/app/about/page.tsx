@@ -43,7 +43,11 @@ export default function Home() {
           className="flex flex-col tracking-[-2%] text-sm sm:text-lg font-light gap-y-3"
         >
           <p>
-          Welcome to my portfolio, a visual journey through my passion for filmmaking and storytelling. Hailing from the captivating landscapes of Nepal, I have spent over 13 years honing my craft as a multi-award winning freelance filmmaker, director, editor, and cinematographer.
+            Welcome to my portfolio, a visual journey through my passion for
+            filmmaking and storytelling. Hailing from the captivating landscapes
+            of Nepal, I have spent over 13 years honing my craft as a
+            multi-award winning freelance filmmaker, director, editor, and
+            cinematographer.
           </p>
           <p>
             Often I see images and have ideas that I would like to share with
@@ -53,13 +57,21 @@ export default function Home() {
             more!
           </p>
           <p>
-          My creative journey is a fusion of experiences from both Nepal and beyond. From the vibrant energy of bustling streets to the serenity of natural vistas, these diverse influences have shaped my unique approach to filmmaking. Each project I undertake is a chance to weave captivating narratives that resonate with audiences across cultures.
+            My creative journey is a fusion of experiences from both Nepal and
+            beyond. From the vibrant energy of bustling streets to the serenity
+            of natural vistas, these diverse influences have shaped my unique
+            approach to filmmaking. Each project I undertake is a chance to
+            weave captivating narratives that resonate with audiences across
+            cultures.
           </p>
           <p>
-          Every frame I capture, every edit I meticulously sculpt, is a testament to my unwavering commitment to the art of storytelling. I believe that every visual has a tale to tell, every scene a story waiting to be unveiled.
+            Every frame I capture, every edit I meticulously sculpt, is a
+            testament to my unwavering commitment to the art of storytelling. I
+            believe that every visual has a tale to tell, every scene a story
+            waiting to be unveiled.
           </p>
         </motion.div>
-        <motion.button
+        {/* <motion.button
           variants={fadeIn("right", 0.1)}
           initial="hidden"
           animate="show"
@@ -67,7 +79,7 @@ export default function Home() {
           className="w-[150px] h-[50px] border-[1px] tranisiton-all hover:bg-black hover:text-white"
         >
           <a href="https://drive.google.com/file/d/1zuGaP2Vx3R38_aejmOwKrdD47q1wexkK/view?usp=sharing" target="_blank">Download CV</a>
-                  </motion.button>
+                  </motion.button> */}
       </section>
     </main>
   );

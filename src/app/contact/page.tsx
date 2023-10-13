@@ -22,7 +22,9 @@ export default function Home() {
             exit="hidden"
             className="w-[70%] xl:w-[80%] text-center text-lg xl:text-xl font-thin tracking-[1motion.x]"
           >
-           Let&apos;s bring your vision to life! Whether it&apos;s directing, editing, or filmmaking, I&apos;m here to create captivating stories. Reach out and let&apos;s make magic happen.
+            Let&apos;s bring your vision to life! Whether it&apos;s directing,
+            editing, or filmmaking, I&apos;m here to create captivating stories.
+            Reach out and let&apos;s make magic happen.
           </motion.p>
         </div>
       </div>
@@ -44,7 +46,7 @@ export default function Home() {
             uttarmagar2023@gmail.com
           </a>
         </motion.div>
-<motion.div
+        <motion.div
           variants={fadeIn("left", 0.6)}
           initial="hidden"
           animate="show"
@@ -54,10 +56,8 @@ export default function Home() {
           <span className="text-base md:text-xl xl:text-2xl font-thin">
             (address)
           </span>
-          <a
-            className="text-lg md:text-4xl xl:text-4xl group-hover:animate-bounce"
-          >
-            Kathmandu, Nepal
+          <a className="text-lg md:text-4xl xl:text-4xl group-hover:animate-bounce">
+            Brampton, Canada
           </a>
         </motion.div>
         <motion.div
@@ -72,9 +72,9 @@ export default function Home() {
           </span>
           <a
             className="text-lg md:text-4xl xl:text-4xl group-hover:animate-bounce"
-            href="tel:+9779823000101"
+            href="tel:+14377332948"
           >
-            +977 9843242948
+            +1437 733 2948
           </a>
         </motion.div>
       </div>
